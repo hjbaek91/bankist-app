@@ -125,10 +125,12 @@ let currentAccount;
 btnLogin.addEventListener("click", function (e) {
   e.preventDefault();
 
+  // Username
   currentAccount = accounts.find(
     (acc) => acc.username === inputLoginUsername.value
   );
 
+  // Password
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
     // Display UI and message
     labelWelcome.textContent = `Welcome back, ${
