@@ -120,4 +120,15 @@ const createUsesrnames = function (accs) {
 };
 createUsesrnames(accounts);
 
+// Event Handlers
+let currentAccount;
+
+btnLogin.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  currentAccount = accounts.find(
+    (acc) => acc.username === inputLoginUsername.value
+  );
+});
+
 /////////////////////////////////////////////////
