@@ -166,6 +166,8 @@ btnTransfer.addEventListener("click", function (e) {
     currentAccount.balance >= amount &&
     receiverAcc?.username !== currentAccount.username
   ) {
+    currentAccount.movements.push(-amount);
+    receiverAcc.movements, push(amount);
   }
 });
 
